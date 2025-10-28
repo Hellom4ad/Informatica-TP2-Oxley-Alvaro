@@ -7,8 +7,7 @@ function registrarComponentesGlobales(app) {
 
     // 2. Ahora registramos los componentes EN la instancia 'app'
     app.component('mi-nav', {
-        // El contenido del componente (props, template)
-        // es exactamente el mismo que en Vue 2. ¡Eso no cambia!
+        
         props: ['paginaActiva'],
         template: `
             <nav>
@@ -37,13 +36,20 @@ function registrarComponentesGlobales(app) {
                             Galería
                         </a>
                     </li>
+                     <li>
+                        <a 
+                            href="acerca-de.html" 
+                            :class="{ 'link-activo': paginaActiva === 'Acerca-de' }"
+                        >
+                            Acerca de
+                        </a>
+                    </li>
                 </ul>
             </nav>
         `
     });
 
     app.component('mi-footer', {
-        // Esto tampoco cambia
         template: `
             <footer style="text-align: center; padding: 1rem; border-top: 1px solid #ccc; margin-top: 2rem;">
                 <p>&copy; 2025 Mi Proyecto.</p>
@@ -51,5 +57,5 @@ function registrarComponentesGlobales(app) {
         `
     });
 
-    // Puedes añadir más app.component() aquí para otros componentes
+    
 }

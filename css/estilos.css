@@ -3,11 +3,10 @@
         nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 1rem 0; }
         nav a { text-decoration: none; color: #333; font-weight: bold; }
 
-        /* * ¡ESTA ES LA CLASE DINÁMICA DE VUE!
-         * Se aplicará solo al 'a' que coincida con la prop.
-        */
+        /*  ¡Esta es una clase dinamica de vue! */
+
         nav a.link-activo {
-            color: red; /* El color que querías */
+            color: red; 
             text-decoration: underline;
         }
 
