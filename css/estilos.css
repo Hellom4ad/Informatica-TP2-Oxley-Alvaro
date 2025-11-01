@@ -3,15 +3,7 @@
         nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 1rem 0; }
         nav a { text-decoration: none; color: #333; font-weight: bold; }
 
-.dark {
-  --brand-color: #8b90ff;
-  --base-color: #1e1f26;
-  --surface-color: #2c2f38;
-  --text-color: #f0f0f0;
-  --secondary-text-color: #b0b3c0;
-  --base-transparent-90: rgba(30, 31, 38, 0.9);
-  --base-transparent-100: rgba(30, 31, 38, 1);}
-        
+
         /*  ¡Esta es una clase dinamica de vue! */
 
         nav a.link-activo {

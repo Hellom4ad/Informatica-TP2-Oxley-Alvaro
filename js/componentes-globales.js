@@ -57,43 +57,6 @@ function registrarComponentesGlobales(app) {
         `
     });
 
-    app.component('theme-toggle', {
-  // El 'data' de un componente SIEMPRE debe ser una función
-  data() {
-    return {
-      isDark: false
-    }
-  },
-  // La plantilla HTML que usará este componente
-  // Usamos backticks (`) para un string multi-línea
-  template: `
-    <button 
-      @click="toggleTheme"
-      class="bg-[var(--surface-color)] text-[var(--text-color)] border border-[var(--surface-color)] py-3 px-6 rounded-lg cursor-pointer font-medium transition-all duration-200 ease-in-out ml-4 hover:bg-[var(--brand-color)] hover:text-white">
-      {{ isDark ? '☀️' : '🌙' }}
-    </button>
-  `,
-  methods: {
-    toggleTheme() {
-      // 1. Cambiamos nuestro estado interno
-      this.isDark = !this.isDark;
-      
-      // 2. Guardamos en localStorage
-      localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-      
-      // 3. Aplicamos la clase al <div> raíz de la app
-      // Usamos document.querySelector('#app') o document.documentElement
-      document.getElementById('app').classList.toggle('dark', this.isDark);
-    }
-  },
-  // Esto se ejecuta cuando el componente se "monta"
-  mounted() {
-    // Leemos la preferencia guardada al cargar
-    this.isDark = localStorage.getItem('theme') === 'dark';
     
-    // Aplicamos el tema inicial al <div> raíz
-    document.getElementById('app').classList.toggle('dark', this.isDark);
-  }
-});
 
 }
