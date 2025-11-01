@@ -1,8 +1,7 @@
-/* === componentes-globales.js === */
+
 console.log("Cargando definiciones de componentes globales...");
 
 // 1. Ya NO llamamos a Vue.component().
-// En su lugar, creamos una FUNCIÓN que recibe la 'app' de Vue 3.
 function registrarComponentesGlobales(app) {
 
     app.component('mi-nav', {
@@ -11,7 +10,6 @@ function registrarComponentesGlobales(app) {
         data() {
             return {
                 menuAbierto: false,
-                // 1. AÑADIMOS UNA VARIABLE PARA SABER SI ES MÓVIL
                 isMobile: false 
             }
         },
@@ -22,7 +20,6 @@ function registrarComponentesGlobales(app) {
             },
             
             // 2. AÑADIMOS UN MÉTODO PARA ACTUALIZAR 'isMobile'
-            //    (768px es el breakpoint 'md' de Tailwind)
             checkScreen() {
                 this.isMobile = window.innerWidth < 768;
                 // Si la pantalla es grande, nos aseguramos que el menú no quede 'abierto'
@@ -33,21 +30,20 @@ function registrarComponentesGlobales(app) {
         },
 
         // 3. AÑADIMOS HOOKS DE CICLO DE VIDA
-        // Se ejecutan cuando el componente se crea y se destruye
         mounted() {
             this.checkScreen(); // Revisa el tamaño al cargar
             window.addEventListener('resize', this.checkScreen); // Revisa al cambiar tamaño
         },
         unmounted() { 
-            // Limpiamos el 'listener' cuando el componente se destruye
+            // Limpiamos el 'listener' cuando el componente se destruye ==> ¿al limpiarse el listener, no detecta un cambio de tamaño de viewport, no aparece el botón?
             window.removeEventListener('resize', this.checkScreen);
         },
 
         // 4. MODIFICAMOS EL TEMPLATE
         template: `
-            <nav class="bg-gray-100 p-4 relative flex justify-between items-center">
+            <nav class=" rounded-md mt-1 p-4 relative flex justify-between items-center">
                 
-                <div class="text-lg font-bold">
+                <div class="text-lg">
                     Mi Proyecto
                 </div>
 
@@ -86,7 +82,7 @@ function registrarComponentesGlobales(app) {
             </nav>
         `
     });
-    
+
     app.component('mi-footer', {
         template: `
             <footer style="text-align: center; padding: 1rem; border-top: 1px solid #ccc; margin-top: 2rem;">

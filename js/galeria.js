@@ -76,6 +76,7 @@ const datosGaleria = {
             });
         }
     },
+    
     // 2. Registra el componente LOCAL (solo existe para esta página)
     components: {
         'galeria-item': {

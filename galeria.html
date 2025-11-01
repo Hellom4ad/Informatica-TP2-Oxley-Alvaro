@@ -8,18 +8,18 @@
 </head>
 <body class="bg-white text-[#070707] font-sans text-base leading-7">
 
-    <div id="app" class="grid grid-cols-[1fr_minmax(0,80rem)_1fr] min-h-screen">
+    <div id="app" class="grid grid-cols-[1fr_minmax(0,80rem)_1fr] min-h-screen ">
 
         <mi-nav pagina-activa="galeria" class="col-start-2"></mi-nav>
 
-        <main class="main col-start-2 p-5">
+        <main class="bg-brown-500 main col-start-2 p-5">
             <h1 class="text-3xl font-bold leading-tight mb-4">Galería - Antonio Berni</h1>
 
             <input 
                 type="search" 
                 v-model="terminoBusqueda"
                 placeholder="Buscar obras por título..."
-                class="w-full p-2 border border-gray-300 rounded-md mb-4"
+                class="w-full p-2 border text-white rounded-md mb-4"
             >
 
             <section class="gallery grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] auto-rows-[18rem] grid-flow-dense gap-3">

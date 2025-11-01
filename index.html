@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <main id="app" class="md:p-8 bg-[var(--base-color)] text-[var(--text-color)] transition-colors duration-200 min-h-screen">
+    <main id="app">
 
         <mi-nav pagina-activa="inicio"></mi-nav>
 
-        <article>
-            <h1>Bienvenido a la Página de Inicio</h1>
-            <p>El enlace "Inicio" en el nav debería estar rojo.</p>
-        </article>
+<header class="w-full h-64 bg-gray-700 text-white flex items-center justify-center bg-cover bg-center my-4"
+                style="background-image: url('img/antonio-berni.png')"> 
+        </header>
+        <article class="w-full rounded-md px-6 py-10  border-t order-b flex justify-center" >
+              <div class=" p-2 mx-auto max-w-4xl">
+            <h2 class="text-4xl">Antonio Berni</h2> <br>
+            <p>Antonio Berni fue un destacado pintor y grabador, nacido el 14 de mayo de 1905 en la ciudad de Rosario. Como artista es reconocido principalmente por el compromiso social y político -reflejado en todas sus obras- que supo incomodar a la sociedad de la época.</p>
+              </div>
+            </article>
+      
         
         <mi-footer></mi-footer>
 
