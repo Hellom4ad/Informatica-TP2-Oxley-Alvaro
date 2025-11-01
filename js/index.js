@@ -1,10 +1,7 @@
-/* === index.js === */
-console.log("Cargando index.js...");
-
 // 1. CREAR la app.
 // (Aquí puedes añadir 'data', 'methods', etc. para ESTA página)
 const app = Vue.createApp({
-    // data, methods, computed... para la página de INICIO (si los necesitas)
+    // data, methods, computed... 
     // data() { return { ... } }
 });
 

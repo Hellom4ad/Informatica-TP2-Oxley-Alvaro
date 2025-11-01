@@ -12,3 +12,18 @@
         }
 
         main { padding: 1rem 2rem; }
+
+@media (min-width: 601px) {
+          /* --- 2. REGLAS DE LAYOUT (igual que antes) --- */
+          .gallery .gallery-item:nth-child(1) {
+            grid-area: span 2 / span 2; 
+          }
+
+          .gallery .gallery-item:nth-child(4n + 1) {
+            grid-row: span 2;
+          }
+
+          .gallery .gallery-item:nth-child(4n + 2) {
+            grid-column: span 2; 
+          }
+        }

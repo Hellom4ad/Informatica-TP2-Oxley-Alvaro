@@ -6,23 +6,37 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="bg-white text-[#070707] font-sans text-base leading-7">
 
-    <main id="app">
+    <div id="app" class="grid grid-cols-[1fr_minmax(0,80rem)_1fr] min-h-screen">
 
-        <mi-nav pagina-activa="galeria"></mi-nav>
+        <mi-nav pagina-activa="galeria" class="col-start-2"></mi-nav>
 
-        <article>
-            <h1>Bienvenido a la Página de galeria</h1>
-            <p>El enlace "galeria" en el nav debería estar rojo.</p>
-        </article>
-        
-        <mi-footer></mi-footer>
+        <main class="main col-start-2 p-5">
+            <h1 class="text-3xl font-bold leading-tight mb-4">Galería - Antonio Berni</h1>
 
-    </main> 
+            <section class="gallery grid grid-cols-[repeat(auto-fit,minmax(18rem,1fr))] auto-rows-[18rem] grid-flow-dense gap-3">
+                
+                <galeria-item
+                    v-for="obra in obras"
+                    :key="obra.id"
+                    :obra="obra"
+                ></galeria-item>
+
+            </section>
+        </main>
+
+        <mi-footer class="col-start-2"></mi-footer>
+
+    </div> 
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/componentes-globales.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/galeria.js"></script>
+
+</body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/componentes-globales.js"></script>
+    <script src="js/galeria.js"></script>
 </body>
 </html>
