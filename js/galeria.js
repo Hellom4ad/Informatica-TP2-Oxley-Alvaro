@@ -4,6 +4,7 @@
 const datosGaleria = {
     data() {
         return {
+            terminoBusqueda: '', // Para guardar el texto del input
             obras: [
                 {
                     id: 1,
@@ -48,6 +49,31 @@ const datosGaleria = {
                     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
                 }
             ]
+        }
+    },
+
+    computed: {
+        // Esta función crea una nueva lista (obrasFiltradas)
+        // CADA VEZ que 'terminoBusqueda' o 'obras' cambien.
+        obrasFiltradas() {
+            // 1. Normalizamos el término de búsqueda (minúsculas, sin espacios extra)
+            const busqueda = this.terminoBusqueda.toLowerCase().trim();
+
+            // 2. Si la búsqueda está vacía, mostramos todas las obras
+            if (!busqueda) {
+                return this.obras;
+            }
+
+            // 3. Si hay búsqueda, filtramos el array
+            return this.obras.filter(obra => {
+                // Normalizamos el título de la obra
+                const titulo = obra.titulo.toLowerCase();
+
+                // 4. LA LÓGICA DE BÚSQUEDA (reemplazando .includes())
+                // .indexOf(busqueda) devuelve -1 si NO encuentra el texto.
+                // Por lo tanto, si es DIFERENTE de -1, ¡significa que SÍ lo encontró!
+                return titulo.indexOf(busqueda) !== -1;
+            });
         }
     },
     // 2. Registra el componente LOCAL (solo existe para esta página)
