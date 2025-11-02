@@ -9,44 +9,44 @@ const datosGaleria = {
                 {
                     id: 1,
                     titulo: 'Pesadilla de los injustos',
-                    img: 'https://www.bellasartes.gob.ar/media/uploads/coleccion/11131.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/pesadilla-de-los-injustos.jpg',
+                    desc: 'Fecha: 1961, soporte: sobre tela.'
                 },
                 {
                     id: 2,
                     titulo: 'La siesta',
-                    img: 'https://www.bellasartes.gob.ar/media/uploads/coleccion/11513.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/la-siesta.jpg',
+                    desc: 'Fecha: 1943 soporte: sobre tela.'
                 },
                 {
                     id: 3,
                     titulo: 'Primeros pasos',
-                    img: 'https://www.bellasartes.gob.ar/media/thumbs/uploads/coleccion/i7RMvoCqcaPr.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/primeros-pasos.jpg',
+                    desc: 'Fecha: 1936, soporte: sobre tela.'
                 },
                 {
                     id: 4,
                     titulo: 'Figura de niña',
-                    img: 'https://www.bellasartes.gob.ar/media/uploads/coleccion/6479.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/figura-de-niña.jpg',
+                    desc: 'Fecha: 1910-1945, soporte: sobre tela.'
                 },
                 {
                     id: 5,
                     titulo: 'Cristo en el departamento',
-                    img: 'https://www.bellasartes.gob.ar/media/uploads/coleccion/11514.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/cristo-en-el-departamento.jpg',
+                    desc: 'Fecha: 1981, soporte: sobre tela.'
                 },
                 {
                     id: 6,
                     titulo: 'Juanito Laguna aprende a leer',
-                    img: 'https://www.bellasartes.gob.ar/media/uploads/coleccion/7164.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/juanito-laguna-aprende-a-leer.jpg',
+                    desc: 'Fecha: 1961, soporte: sobre tela.'
                 },
                 {
                     id: 7,
                     titulo: 'El tanque blanco',
-                    img: 'https://www.bellasartes.gob.ar/media/thumbs/uploads/coleccion/XOZX8Op-lLrF.jpg',
-                    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    img: 'img/obras/el-tanque-blanco.jpg',
+                    desc: 'Fecha: 1910-1945, soporte: sobre tela.'
                 }
             ]
         }
