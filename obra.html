@@ -16,30 +16,35 @@
 
         <mi-nav :pagina-activa="'galeria'"></mi-nav>
 
-        <main class="main col-start-2 p-5">
+        <div class="main col-start-2 p-5">
             <h1 class="text-3xl font-bold leading-tight mb-4">{{ obra.titulo }}</h1>
 
-            <section class="grid grid-cols-1 gap-8 md:grid-cols-2 items-center p-8">
-                <div>
-                    <img :src="obra.img" :alt="obra.titulo" class="w-full h-auto object-cover rounded-md shadow-lg">
+            <section class="grid grid-cols-1 gap-8 md:grid-cols-3 items-center p-8">
+                <div class="w-full h-auto object-cover rounded-md shadow-lg md:col-span-2">
+                    <img :src="obra.img" :alt="obra.titulo" >
                 </div>
                 
-                <article class="flex flex-col justify-center max-h-64 rounded-md shadow-md p-4">
+                <article class="rounded-md shadow-md p-4 md:col-span-1">
                     <h2 class="text-2xl font-semibold">Detalles</h2>
                     <p class="text-lg mt-2">{{ obra.desc }}</p>
                     
-                    <p class="mt-4 text-gray-600">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Aliquid, animi assumenda autem corporis, cumque eius 
-                        fugiat illum iste itaque laboriosam...
-                    </p>
-                    
+                  
                     <a href="galeria.html" class="mt-6 text-blue-500 hover:underline">
                         &larr; Volver a la galería
                     </a>
                 </article>
-            </section>
-        </main>
+
+            </section> 
+         </div>
+
+         <div class="flex justify-center">
+              <article class="w-[100%] p-4 rounded-md  shadow-lg md: max-w-[90%]" > 
+                <h1 class="text-2xl">Comentario sobre {{ obra.titulo }}</h1>
+                <p class="mt-4 text-lg text-black"> {{ obra.info }} </p> 
+            </article>
+         </div>
+           
+        
 
         <mi-footer class="col-start-2"></mi-footer>
     </div>
