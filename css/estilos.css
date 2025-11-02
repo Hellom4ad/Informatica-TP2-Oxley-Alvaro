@@ -1,26 +1,29 @@
+   /* Nav */
 nav, h3, div{font-family: "Alegreya Sans", sans-serif;font-weight: 500; }
 nav { background: #211d1d; padding: 0 1rem; width: 100%;}
 nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 1rem 0; }
 nav a, nav div { text-decoration: none; color: rgb(224, 224, 224); font-weight: bold; }
 .logo{font-family: "Alegreya"; font-weight: 600;}
 
+  /* Elementos y texto */
+
 article{background-color: #EAE3DA;}
 body{background-color: #211d1d;}
+footer {color: #8A9A5B;} 
+main { padding: 1rem 2rem; }
 
 h2, h1 {color: #B96D40;}
-footer {color: #8A9A5B;}      
-
- /*  ¡Esta es una clase dinamica de vue! */
+     
+ /*  clase dinamica de vue */
 
  nav a.link-activo {
 color: #B96D40; 
 text-decoration: underline;
 }
         
-main { padding: 1rem 2rem; }
+/* --- REGLAS DE LAYOUT Galeria --- */
 
 @media (min-width: 601px) {
- /* --- 2. REGLAS DE LAYOUT Galeria --- */
  .gallery .gallery-item:nth-child(1) {
             grid-area: span 2 / span 2; 
  }

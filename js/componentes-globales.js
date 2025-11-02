@@ -19,7 +19,7 @@ function registrarComponentesGlobales(app) {
                 this.menuAbierto = !this.menuAbierto;
             },
             
-            // 2. AÑADIMOS UN MÉTODO PARA ACTUALIZAR 'isMobile'
+        
             checkScreen() {
                 this.isMobile = window.innerWidth < 768;
                 // Si la pantalla es grande, nos aseguramos que el menú no quede 'abierto'
@@ -29,17 +29,16 @@ function registrarComponentesGlobales(app) {
             }
         },
 
-        // 3. AÑADIMOS HOOKS DE CICLO DE VIDA
+        
         mounted() {
             this.checkScreen(); // Revisa el tamaño al cargar
             window.addEventListener('resize', this.checkScreen); // Revisa al cambiar tamaño
         },
         unmounted() { 
-            // Limpiamos el 'listener' cuando el componente se destruye ==> ¿al limpiarse el listener, no detecta un cambio de tamaño de viewport, no aparece el botón?
+            // se limpia el 'listener' cuando el componente se destruye ==> ¿al limpiarse el listener, no detecta un cambio de tamaño de viewport, no aparece el botón?
             window.removeEventListener('resize', this.checkScreen);
         },
 
-        // 4. MODIFICAMOS EL TEMPLATE
         template: `
             <nav class=" rounded-md mt-1 p-4 relative flex justify-between items-center">
                 

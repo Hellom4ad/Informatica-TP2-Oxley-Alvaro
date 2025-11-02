@@ -21,11 +21,12 @@
             
 <article class=" w-[70%] max-w-7xl grid place-items-center gap-8 rounded-md px-6 py-10 border-t order-b">
     <section>
-        <h1 class="text-2xl">Página de Contacto</h1>
-            <p>El enlace "Contacto" en el nav debería estar rojo.</p>
-            <p>Este formulario será controlado por Vue desde `contacto.js`.</p>
+        <h1 class="text-2xl">Página de Contacto</h1> <br>
+            <p>Porfavor, llene el formulario para ponerse en contacto con nosotros.</p>
+            <p>Responderemos lo antes posible.</p>
     </section>
-   <form @submit.prevent="enviarFormulario" class="block bg-white p-6 m-2 rounded-md w-full shadow-md text-gray-900">
+
+   <form @submit.prevent="enviarFormulario" novalidate class="block bg-white p-6 m-2 rounded-md w-full shadow-md text-gray-900">
     
     <div class="w-full mb-4">
         <h6 class="text-lg font-semibold">Información de Contacto</h6>
@@ -40,8 +41,10 @@
                 id="nombre" 
                 v-model="nombre" 
                 placeholder="Tu nombre" 
-                class="w-full border-2 rounded-sm border-gray-500 p-2  "
+                class="w-full border-2 rounded-sm p-2"
+                :class="{ 'border-red-500': errors.nombre, 'border-gray-500': !errors.nombre }"
             >
+            <p v-if="errors.nombre" class="text-red-500 text-sm mt-1">{{ errors.nombre }}</p>
         </div>
 
         <div>
@@ -51,8 +54,10 @@
                 id="email" 
                 v-model="email" 
                 placeholder="tu@email.com" 
-                class="w-full border-2 rounded-sm border-gray-500 p-2"
+                class="w-full border-2 rounded-sm p-2"
+                :class="{ 'border-red-500': errors.email, 'border-gray-500': !errors.email }"
             >
+            <p v-if="errors.email" class="text-red-500 text-sm mt-1">{{ errors.email }}</p>
         </div>
 
         <div>
@@ -75,8 +80,10 @@
                 id="asunto" 
                 v-model="asunto" 
                 placeholder="Asunto de tu mensaje" 
-                class="w-full border-2 rounded-sm border-gray-500 p-2"
+                class="w-full border-2 rounded-sm p-2"
+                :class="{ 'border-red-500': errors.asunto, 'border-gray-500': !errors.asunto }"
             >
+            <p v-if="errors.asunto" class="text-red-500 text-sm mt-1">{{ errors.asunto }}</p>
         </div>
         
         <div class="md:col-span-2">
@@ -86,8 +93,10 @@
                 rows="5" 
                 v-model="mensaje" 
                 placeholder="Escribe tu mensaje..." 
-                class="w-full border-2 rounded-sm border-gray-500 p-2  "
+                class="w-full border-2 rounded-sm p-2"
+                :class="{ 'border-red-500': errors.mensaje, 'border-gray-500': !errors.mensaje }"
             ></textarea>
+            <p v-if="errors.mensaje" class="text-red-500 text-sm mt-1">{{ errors.mensaje }}</p>
         </div>
 
     </section>

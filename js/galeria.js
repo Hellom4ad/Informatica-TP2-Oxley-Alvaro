@@ -52,27 +52,50 @@ const datosGaleria = {
         }
     },
 
-    computed: {
-        // Esta función crea una nueva lista (obrasFiltradas)
-        // CADA VEZ que 'terminoBusqueda' o 'obras' cambien.
+   computed: {
+    
         obrasFiltradas() {
-            // 1. Normalizamos el término de búsqueda (minúsculas, sin espacios extra)
+            // Se normaliza el término de búsqueda (minúsculas, sin espacios extra)
             const busqueda = this.terminoBusqueda.toLowerCase().trim();
 
-            // 2. Si la búsqueda está vacía, mostramos todas las obras
+            // Si la búsqueda está vacía, se muestran todas las obras
             if (!busqueda) {
                 return this.obras;
             }
 
-            // 3. Si hay búsqueda, filtramos el array
             return this.obras.filter(obra => {
-                // Normalizamos el título de la obra
+                
                 const titulo = obra.titulo.toLowerCase();
 
-                // 4. LA LÓGICA DE BÚSQUEDA (reemplazando .includes())
-                // .indexOf(busqueda) devuelve -1 si NO encuentra el texto.
-                // Por lo tanto, si es DIFERENTE de -1, ¡significa que SÍ lo encontró!
-                return titulo.indexOf(busqueda) !== -1;
+                // Si el término de búsqueda es más largo que el título, no hay coincidencias
+                if (busqueda.length > titulo.length) {
+                    return false;
+                }
+
+                for (let i = 0; i <= titulo.length - busqueda.length; i++) {
+                    
+                    let match = true; // Asumimos que coincide hasta que se demuestre lo contrario
+
+                    // Bucle compara letra por letra
+                    for (let j = 0; j < busqueda.length; j++) {
+                        
+                        // Si un caracter no coincide, se rompe el bucle
+                        if (titulo[i + j] !== busqueda[j]) {
+                            match = false;
+                            break;
+                        }
+                    }
+
+                    // Si el bucle interior terminó y 'match' sigue siendo 'true', significa que se encontro una coincidencia.
+
+                    if (match) {
+                        return true; // Devolvemos 'true' para el .filter()
+                    }
+                }
+                // Si el bucle 'i' (exterior) termina sin haber encontrado un 'match',
+               
+                return false; 
+                
             });
         }
     },
