@@ -68,6 +68,11 @@ function registrarComponentesGlobales(app) {
                         </a>
                     </li>
                     <li>
+                        <a href="registro-obras.html" :class="{ 'link-activo': paginaActiva === 'registro' }" class="font-bold text-gray-700">
+                            Registro obras
+                        </a>
+                    </li>
+                    <li>
                         <a href="galeria.html" :class="{ 'link-activo': paginaActiva === 'galeria' }" class="font-bold text-gray-700">
                             Galería
                         </a>

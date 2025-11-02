@@ -1,7 +1,7 @@
    /* Nav */
 nav, h3, div{font-family: "Alegreya Sans", sans-serif;font-weight: 500; }
 nav { background: #211d1d; padding: 0 1rem; width: 100%;}
-nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 1rem 0; }
+nav ul{ list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 1rem 0; }
 nav a, nav div { text-decoration: none; color: rgb(224, 224, 224); font-weight: bold; }
 .logo{font-family: "Alegreya"; font-weight: 600;}
 
