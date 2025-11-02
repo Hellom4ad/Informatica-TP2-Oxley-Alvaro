@@ -40,7 +40,7 @@ function registrarComponentesGlobales(app) {
         },
 
         template: `
-            <nav class=" rounded-md mt-1 p-4 relative flex justify-between items-center">
+            <nav class=" rounded-md mt-1 p-4 relative flex justify-between items-center z-20">
                 
                 <a href="index.html" class="text-2xl logo">
                     Archivo Berni
@@ -52,7 +52,7 @@ function registrarComponentesGlobales(app) {
                 </button>
 
                 <ul 
-                    class="flex-col absolute top-16 left-0 w-full bg-gray-100 p-4 gap-4
+                    class="flex-col absolute top-16 left-0 w-full bg-gray-800 p-4 gap-4 z-20
                            md:flex md:flex-row md:static md:w-auto md:bg-transparent md:p-0 md:gap-6"
                     
                     :style="isMobile && !menuAbierto ? 'display: none;' : ''" 
