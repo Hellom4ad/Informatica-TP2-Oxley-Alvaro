@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle de Obra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="bg-white text-[#070707] font-sans text-base leading-7">
+
+    <div id="app" v-if="obra">
+
+        <mi-nav :pagina-activa="'galeria'"></mi-nav>
+
+        <main class="main col-start-2 p-5">
+            <h1 class="text-3xl font-bold leading-tight mb-4">{{ obra.titulo }}</h1>
+
+            <section class="grid grid-cols-1 gap-8 md:grid-cols-2 items-center p-8">
+                <div>
+                    <img :src="obra.img" :alt="obra.titulo" class="w-full h-auto object-cover rounded-md shadow-lg">
+                </div>
+                
+                <article class="flex flex-col justify-center max-h-64 rounded-md shadow-md p-4">
+                    <h2 class="text-2xl font-semibold">Detalles</h2>
+                    <p class="text-lg mt-2">{{ obra.desc }}</p>
+                    
+                    <p class="mt-4 text-gray-600">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Aliquid, animi assumenda autem corporis, cumque eius 
+                        fugiat illum iste itaque laboriosam...
+                    </p>
+                    
+                    <a href="galeria.html" class="mt-6 text-blue-500 hover:underline">
+                        &larr; Volver a la galería
+                    </a>
+                </article>
+            </section>
+        </main>
+
+        <mi-footer class="col-start-2"></mi-footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <script src="js/componentes-globales.js"></script>
+    <script src="js/datos-obras.js"></script> 
+    <script src="js/obra.js"></script> </body>
+</html>
