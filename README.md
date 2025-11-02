@@ -1,3 +1,3 @@
-Cree esta rama para entender la creacion e importación de componentes de vue! 
+Trabajo Práctico N°2 de informatica General. 
 
-Ya aprendí un poco a usar vue en un proyecto anterior: [Proyecto Editor de Texto](https://github.com/Hellom4ad/Editor-de-Texto/tree/main)
+Integrantes: Álvaro Oxley.
