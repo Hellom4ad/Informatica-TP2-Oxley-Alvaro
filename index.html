@@ -13,24 +13,36 @@
 </head>
 <body>
 
-    <main id="app">
+    <div id="app">
 
         <mi-nav pagina-activa="inicio"></mi-nav>
 
 <header class="w-full h-64 bg-gray-700 text-white flex items-center justify-center bg-cover bg-center my-4"
-                style="background-image: url('img/antonio-berni.png')"> 
+                style="background-image: url('img/antonio-berni.png')"> <div class= "text-gray-950"><p class="text-8xl ">Antonio Berni</p></div>
         </header>
-        <article class="w-full rounded-md px-6 py-10  border-t order-b flex justify-center" >
-              <div class=" p-2 mx-auto max-w-4xl">
-            <h2 class="text-4xl">Antonio Berni</h2> <br>
-            <p>Antonio Berni fue un destacado pintor y grabador, nacido el 14 de mayo de 1905 en la ciudad de Rosario. Como artista es reconocido principalmente por el compromiso social y político -reflejado en todas sus obras- que supo incomodar a la sociedad de la época.</p>
-              </div>
-            </article>
-      
+
+      <article class="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 rounded-md px-6 py-10 border-t order-b mx-4">
+
+    <section class="lg:col-span-3 p-4 text-md">
+        <h2 class="text-4xl">Antonio Berni</h2> <br>
+        <p>Antonio Berni fue un destacado pintor y grabador, nacido el 14 de mayo de 1905 en la ciudad de Rosario. Como artista es reconocido principalmente por el compromiso social y político -reflejado en todas sus obras- que supo incomodar a la sociedad de la época.</p> <br>
+       <p>Hijo de un sastre italiano y madre argentina -hija de inmigrantes italianos-, Berni comenzó a estudiar pintura en el Centro Catalán de su ciudad natal. Con solo 17 años expuso sus obras en Rosario y tres años más tarde realizó una exposición en la Galería Witcomb de Buenos Aires, recibiendo el halago de los críticos en varios artículos publicados en los diarios La Nación y La Prensa. Fue gracias a esta difusión que años más tarde consiguió una beca del Jockey Club de Rosario para estudiar en Europa,</p> <br>
+
+<p>En París se formó con los pintores André Lhote y Othon Friesz, en la Academia de la calle Grande Chaumiere.</p> <br>
+
+<p>Durante sus años en Europa estuvo expuesto a diversas corrientes artísticas, incluyendo el surrealismo y el expresionismo. Sus obras fueron expuestas en el Salón de Madrid y en la Galería Nancy.</p>
+ <br>
+<p>Después del golpe del 30, ya casado y con una hija, Antonio Berni decidió volver a Argentina, trayendo de París una fuerte carga política y toda la influencia de sus vínculos con los artistas surrealistas.</p>
+    </section>
+
+    <section class="lg:col-span-1 p-4 grid place-items-center" > <img src="img/grabado.png" alt="grabado berni"></section>
+
+</article>
+        
         
         <mi-footer></mi-footer>
 
-    </main> 
+    </div> 
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/componentes-globales.js"></script>

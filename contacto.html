@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -16,8 +17,8 @@
             <h1>Página de Contacto</h1>
             <p>El enlace "Contacto" en el nav debería estar rojo.</p>
             <p>Este formulario será controlado por Vue desde `contacto.js`.</p>
-
-            <form @submit.prevent="enviarFormulario">
+<article class="grid grid-cols-1 lg:grid-cols-4 lg:gap-8 rounded-md px-6 py-10 border-t order-b">
+     <form @submit.prevent="enviarFormulario">
                 <div>
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" v-model="nombre" placeholder="Tu nombre">
@@ -33,6 +34,8 @@
                 <button type="submit">Enviar</button>
             </form>
 
+</article>
+           
         </main>
 
         <mi-footer></mi-footer>

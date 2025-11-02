@@ -44,7 +44,7 @@ function registrarComponentesGlobales(app) {
             <nav class=" rounded-md mt-1 p-4 relative flex justify-between items-center">
                 
                 <div class="text-lg">
-                    Mi Proyecto
+                    Archivo Berni
                 </div>
 
                 <button @click="toggleMenu" class="md:hidden p-2 text-gray-800"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -86,7 +86,7 @@ function registrarComponentesGlobales(app) {
     app.component('mi-footer', {
         template: `
             <footer style="text-align: center; padding: 1rem; border-top: 1px solid #ccc; margin-top: 2rem;">
-                <p>&copy; 2025 Mi Proyecto.</p>
+                <p>&copy; 2025 Archivo Berni.</p>
             </footer>
         `
     });
